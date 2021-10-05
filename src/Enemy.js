@@ -12,7 +12,7 @@ export default function Enemy({ args = [2, 0.5, 1], color, ...props }) {
       /* ref.current.geometry.dispose()
       ref.current.material.dispose()
       scene.remove(ref.current) */
-      console.log(ref.current)
+     
       increaseScore()
     },
   }))
