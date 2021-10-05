@@ -1,4 +1,5 @@
 import { Canvas } from "@react-three/fiber"
+import { Html } from "@react-three/drei"
 import { Physics } from "@react-three/cannon"
 import { useStore } from "./store"
 
@@ -10,9 +11,10 @@ export default function App() {
   const score = useStore((state) => state.score)
   return (
     <>
-      <h1> {score} </h1>
-
       <Canvas camera={{ position: [0, 5, 12], fov: 50 }}>
+        <Html position={[0, 0, 0]}>
+          <h1> {score} </h1>
+        </Html>
         <ambientLight intensity={0.3} />
         <pointLight position={[10, 10, 5]} />
         <pointLight position={[-10, -10, -5]} />
