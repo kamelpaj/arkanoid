@@ -7,12 +7,13 @@ import PhysicsWorld from "./PhysicsWorld"
 import Ball from "./Ball"
 import Paddle from "./Paddle"
 import Enemy from "./Enemy"
+import Wall from "./Wall"
 
 export default function App() {
   const score = useStore((state) => state.score)
 
   return (
-    <Canvas camera={{ position: [0, 5, 12], fov: 50 }}>
+    <Canvas camera={{ position: [0, 5, 12], fov: 100 }}>
       <Text
         font="https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vaqI.woff"
         fontSize={1}
@@ -35,6 +36,11 @@ export default function App() {
         <Paddle />
         <Enemy color="orange" position={[2, 1, 0]} />
         <Enemy color="hotpink" position={[-2, 3, 0]} />
+        
+        {/* <Wall color={"blue"} position={[0, 0, 0]} rotation={[0, 0, 0]} />
+        <Wall color={"blue"} position={[6, 0, 0]} rotation={[0, -0.9, 0]} />
+        <Wall color={"blue"} position={[0, 6, 0]} rotation={[0.9, 0, 0]} /> */}
+        {/* <Wall color={"blue"} position={[0, -6, 0]} rotation={[-0.9, 0, 0]} /> */}
       </PhysicsWorld>
     </Canvas>
   )

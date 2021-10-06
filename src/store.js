@@ -3,7 +3,6 @@ import create from "zustand"
 /* Audio */
 import bgAudio from "./resources/Brytning.ogg"
 const bg = new Audio(bgAudio)
-console.log(bg)
 bg.volume = 0.1
 bg.loop = true
 bg.play()
