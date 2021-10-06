@@ -12,7 +12,6 @@ const PhysicsWorld = ({ children }) => {
   useFrame(() => {
     const { slowMo } = controls.current
     slowMo ? setGravity(-1) : setGravity(-30)
-    console.log(slowMo)
   })
 
   return (

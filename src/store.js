@@ -1,12 +1,20 @@
 import create from "zustand"
 
-/* Audio */
+/* Audio imports */
 import bgAudio from "./resources/Brytning.ogg"
+import goAudio from "./resources/game-over.wav"
+
+/* Audio */
 const bg = new Audio(bgAudio)
-console.log(bg)
+const go = new Audio(goAudio)
+
 bg.volume = 0.1
 bg.loop = true
 bg.play()
+
+go.volume = 0.15
+
+/* State */
 
 export const useStore = create((set) => ({
   // Score
@@ -17,4 +25,7 @@ export const useStore = create((set) => ({
   // Gravity
   gravity: -30,
   setGravity: (value) => set({ gravity: value }),
+
+  // Audio
+  gameOverAudio: go,
 }))
