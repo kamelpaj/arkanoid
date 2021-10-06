@@ -1,7 +1,7 @@
 import create from "zustand"
 
 /* Audio imports */
-import bgAudio from "./resources/Brytning.ogg"
+import bgAudio from "./resources/Brytning_2.ogg"
 import goAudio from "./resources/game-over.wav"
 
 /* Audio */
